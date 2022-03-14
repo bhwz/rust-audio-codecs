@@ -1,0 +1,21 @@
+[package]
+name = "rust-audio-codecs"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+fdk-aac-sys = { version = "0.1.0", path = "fdk-aac-sys", optional = true }
+flac-sys = { version = "0.1.0", path = "flac-sys", optional = true }
+opus-sys = { version = "0.1.0", path = "opus-sys", optional = true }
+
+[features]
+default = []
+fdk-aac = ["fdk-aac-sys"]
+flac = ["flac-sys"]
+opus = ["opus-sys"]
+
+all = ["fdk-aac", "flac", "opus"]
+all-build-native = ["fdk-aac-sys/build-native", "flac-sys/build-native", "opus-sys/build-native"]
+
+free = ["flac", "opus"]
+free-build-native = ["flac-sys/build-native", "opus-sys/build-native"]

@@ -1,0 +1,9 @@
+[submodule "fdk-aac-sys/fdk-aac"]
+	path = fdk-aac-sys/fdk-aac
+	url = https://github.com/mstorsjo/fdk-aac.git
+[submodule "flac-sys/flac"]
+	path = flac-sys/flac
+	url = https://github.com/xiph/flac.git
+[submodule "opus-sys/opus"]
+	path = opus-sys/opus
+	url = https://github.com/xiph/opus.git
